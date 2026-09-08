@@ -1,2 +1,1 @@
-# CIS-2109
-
+This is an introductory course in database management systems (DBMS) and file management systems. The course covers data modeling concepts, various file management techniques, data definition and manipulation using SQL, issues in data management, development and implementation of database applications, and a perspective on emerging issues in database systems. Students work in the Lab on various assignments including prototyping and SQL, utilizing state of the art DBMS and CASE tools.
