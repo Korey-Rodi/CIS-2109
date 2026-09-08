@@ -1,0 +1,86 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="A8A49B34-9B1C-317F-9263-5CB39A9C52A2" name="Lab_Service_Order">
+<createdBy>koreyrodi</createdBy>
+<createdTime>2026-02-18 02:05:29 UTC</createdTime>
+<ownerDesignName>HW1Part2</ownerDesignName>
+<engineerTo>
+<item key="00C6BB50-DD8E-34EB-1EFB-590FBFEEE972" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Lab_Service_Order_ID" id="9613BC74-60EB-22B3-BDDB-0615336A273C">
+<createdBy>koreyrodi</createdBy>
+<createdTime>2026-02-18 02:06:06 UTC</createdTime>
+<ownerDesignName>HW1Part2</ownerDesignName>
+<engineerTo>
+<item key="00C6BB50-DD8E-34EB-1EFB-590FBFEEE972" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Order_Date" id="9007773F-5A7E-5760-63EC-B8EBD38D9B76">
+<createdBy>koreyrodi</createdBy>
+<createdTime>2026-02-18 02:14:18 UTC</createdTime>
+<ownerDesignName>HW1Part2</ownerDesignName>
+<engineerTo>
+<item key="00C6BB50-DD8E-34EB-1EFB-590FBFEEE972" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Patient_ID" id="BAA06096-D6D6-AC30-86B3-7A1001252736">
+<createdBy>koreyrodi</createdBy>
+<createdTime>2026-02-18 02:21:15 UTC</createdTime>
+<generatorID>66DAC898-B108-2208-475C-4A7729DC56B8</generatorID>
+<ownerDesignName>HW1Part2</ownerDesignName>
+<engineerTo>
+<item key="00C6BB50-DD8E-34EB-1EFB-590FBFEEE972" value="true"/>
+</engineerTo>
+<referedAttribute>E9BA0FA7-F459-B278-5CE8-27BA4022C7B8</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Service_ID" id="0891E174-DF71-A2F4-0A95-D1D24B80CE45">
+<createdBy>koreyrodi</createdBy>
+<createdTime>2026-02-18 02:22:16 UTC</createdTime>
+<generatorID>3FC3CF58-E167-92F2-3F46-AFD07052B898</generatorID>
+<ownerDesignName>HW1Part2</ownerDesignName>
+<engineerTo>
+<item key="00C6BB50-DD8E-34EB-1EFB-590FBFEEE972" value="true"/>
+</engineerTo>
+<referedAttribute>93736574-FD8C-7CC2-4066-B0373C737686</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="3D062D5C-C915-3EB4-BEE3-B13A22237D80" name="Lab_Service_Order PK">
+<createdBy>koreyrodi</createdBy>
+<createdTime>2026-02-18 02:06:17 UTC</createdTime>
+<ownerDesignName>HW1Part2</ownerDesignName>
+<engineerTo>
+<item key="00C6BB50-DD8E-34EB-1EFB-590FBFEEE972" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>9613BC74-60EB-22B3-BDDB-0615336A273C</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

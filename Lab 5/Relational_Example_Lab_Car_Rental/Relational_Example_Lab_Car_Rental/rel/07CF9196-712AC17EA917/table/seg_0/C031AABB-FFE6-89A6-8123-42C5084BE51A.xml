@@ -1,0 +1,50 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="C031AABB-FFE6-89A6-8123-42C5084BE51A" name="Car_Type">
+<createdBy>tue63037</createdBy>
+<createdTime>2025-09-30 17:17:27 UTC</createdTime>
+<generatorID>FAAF65F0-5AAD-136E-93E7-79D4D18A1657</generatorID>
+<ownerDesignName>Relational_Example_Lab_Car_Rental</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Car_type_Id" id="6966C8DE-D994-613F-6CC3-E1BC5A7D863B">
+<createdBy>tue63037</createdBy>
+<createdTime>2025-09-30 17:17:27 UTC</createdTime>
+<generatorID>2AE2F3D9-F2AB-4AC2-68FD-E865776AE08F</generatorID>
+<ownerDesignName>Relational_Example_Lab_Car_Rental</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Desc" id="04BD8386-BD68-3E39-87EF-C01EEC0C2995">
+<createdBy>tue63037</createdBy>
+<createdTime>2025-09-30 17:17:27 UTC</createdTime>
+<generatorID>633ACAAA-091A-BAB4-B667-1BF0328AA21B</generatorID>
+<ownerDesignName>Relational_Example_Lab_Car_Rental</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="9FCB2CFF-0495-8EDD-AC93-7A9DA73FE6D2" name="Car_Type_PK">
+<createdBy>tue63037</createdBy>
+<createdTime>2025-09-30 17:17:27 UTC</createdTime>
+<generatorID>7F974C13-2FB4-9E48-D92C-D495F97DA928</generatorID>
+<ownerDesignName>Relational_Example_Lab_Car_Rental</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6966C8DE-D994-613F-6CC3-E1BC5A7D863B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

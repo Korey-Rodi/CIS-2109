@@ -1,0 +1,138 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="562223E8-0FB6-644A-34B3-D848737DDFF0" name="Employee">
+<createdBy>koreyrodi</createdBy>
+<createdTime>2026-01-23 20:44:55 UTC</createdTime>
+<ownerDesignName>Lab4</ownerDesignName>
+<engineerTo>
+<item key="9FF6454B-3DE6-5AC8-BABF-BD18243903A4" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<discriminatorAttributeID>B1744CF0-FE71-26AA-B888-4DC517D784E9</discriminatorAttributeID>
+<completeSubtypes>true</completeSubtypes>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Company_ID" id="CAF78A24-5780-3B53-B8A1-BEBA741FC421">
+<createdBy>koreyrodi</createdBy>
+<createdTime>2026-01-28 20:34:56 UTC</createdTime>
+<ownerDesignName>Lab4</ownerDesignName>
+<engineerTo>
+<item key="9FF6454B-3DE6-5AC8-BABF-BD18243903A4" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="First_Name" id="DBBB4641-C339-FDB4-3CD9-4E0DDFB01D15">
+<createdBy>koreyrodi</createdBy>
+<createdTime>2026-01-28 20:27:08 UTC</createdTime>
+<ownerDesignName>Lab4</ownerDesignName>
+<engineerTo>
+<item key="9FF6454B-3DE6-5AC8-BABF-BD18243903A4" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Last_Name" id="3F476E9F-6168-C8AC-C9D2-FCFD9F5A5108">
+<createdBy>koreyrodi</createdBy>
+<createdTime>2026-01-28 20:27:22 UTC</createdTime>
+<ownerDesignName>Lab4</ownerDesignName>
+<engineerTo>
+<item key="9FF6454B-3DE6-5AC8-BABF-BD18243903A4" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Office_ID" id="A824F15E-07FF-9705-D517-577049B7384C">
+<createdBy>koreyrodi</createdBy>
+<createdTime>2026-01-28 20:26:40 UTC</createdTime>
+<ownerDesignName>Lab4</ownerDesignName>
+<engineerTo>
+<item key="9FF6454B-3DE6-5AC8-BABF-BD18243903A4" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Hire_Date" id="76CA28BD-A305-8D03-BEAA-BB58E8CBC910">
+<createdBy>koreyrodi</createdBy>
+<createdTime>2026-01-28 20:27:38 UTC</createdTime>
+<ownerDesignName>Lab4</ownerDesignName>
+<engineerTo>
+<item key="9FF6454B-3DE6-5AC8-BABF-BD18243903A4" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Salary" id="F7FDCC97-7E5A-695C-D124-E96A8D7C9D77">
+<createdBy>koreyrodi</createdBy>
+<createdTime>2026-02-06 20:22:13 UTC</createdTime>
+<ownerDesignName>Lab4</ownerDesignName>
+<engineerTo>
+<item key="9FF6454B-3DE6-5AC8-BABF-BD18243903A4" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT043</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Employee_Type" id="B1744CF0-FE71-26AA-B888-4DC517D784E9">
+<createdBy>koreyrodi</createdBy>
+<createdTime>2026-02-06 20:23:15 UTC</createdTime>
+<ownerDesignName>Lab4</ownerDesignName>
+<engineerTo>
+<item key="9FF6454B-3DE6-5AC8-BABF-BD18243903A4" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Job_Title" id="3564A134-8BDE-CF2C-251D-8CD50FAE1E0B">
+<createdBy>koreyrodi</createdBy>
+<createdTime>2026-02-06 20:35:37 UTC</createdTime>
+<ownerDesignName>Lab4</ownerDesignName>
+<engineerTo>
+<item key="9FF6454B-3DE6-5AC8-BABF-BD18243903A4" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="EE0F59DB-78EF-B721-220B-381CE77452B1" name="Employees PK">
+<createdBy>koreyrodi</createdBy>
+<createdTime>2026-01-23 21:35:08 UTC</createdTime>
+<ownerDesignName>Lab4</ownerDesignName>
+<engineerTo>
+<item key="9FF6454B-3DE6-5AC8-BABF-BD18243903A4" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>CAF78A24-5780-3B53-B8A1-BEBA741FC421</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

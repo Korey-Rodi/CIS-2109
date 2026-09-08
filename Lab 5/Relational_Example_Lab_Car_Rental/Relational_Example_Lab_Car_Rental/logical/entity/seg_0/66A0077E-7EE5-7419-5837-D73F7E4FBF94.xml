@@ -1,0 +1,101 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="66A0077E-7EE5-7419-5837-D73F7E4FBF94" name="Payment">
+<createdBy>npoly</createdBy>
+<createdTime>2025-09-22 18:45:26 UTC</createdTime>
+<ownerDesignName>Relational_Example_Lab_Car_Rental</ownerDesignName>
+<engineerTo>
+<item key="07CF9196-381A-05CE-043C-712AC17EA917" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Payment_Id" id="2A9BAF65-605A-B42A-01AD-0BB6A9DA798F">
+<createdBy>npoly</createdBy>
+<createdTime>2025-09-22 18:45:35 UTC</createdTime>
+<ownerDesignName>Relational_Example_Lab_Car_Rental</ownerDesignName>
+<engineerTo>
+<item key="07CF9196-381A-05CE-043C-712AC17EA917" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Pay_Date" id="CF5829F7-8BFB-D9B5-2854-06D41D170760">
+<createdBy>npoly</createdBy>
+<createdTime>2025-09-22 18:45:35 UTC</createdTime>
+<ownerDesignName>Relational_Example_Lab_Car_Rental</ownerDesignName>
+<engineerTo>
+<item key="07CF9196-381A-05CE-043C-712AC17EA917" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Pay_Time" id="EBAA30CD-9D5F-D90E-2613-19F686BABECA">
+<createdBy>npoly</createdBy>
+<createdTime>2025-09-22 18:45:36 UTC</createdTime>
+<ownerDesignName>Relational_Example_Lab_Car_Rental</ownerDesignName>
+<engineerTo>
+<item key="07CF9196-381A-05CE-043C-712AC17EA917" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT047</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Pay_Amount" id="0BA79106-E3A0-FC2E-20DB-FD6E1A2618D2">
+<createdBy>npoly</createdBy>
+<createdTime>2025-09-22 18:45:52 UTC</createdTime>
+<ownerDesignName>Relational_Example_Lab_Car_Rental</ownerDesignName>
+<engineerTo>
+<item key="07CF9196-381A-05CE-043C-712AC17EA917" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>11</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,11,2</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Rental_Id" id="24B2EA3C-F76F-C7DE-205D-52ED1DC2CBE0">
+<createdBy>npoly</createdBy>
+<createdTime>2025-09-22 18:47:48 UTC</createdTime>
+<generatorID>615FD02A-DD76-A1BB-4A3A-FD4B9957D34C</generatorID>
+<ownerDesignName>Relational_Example_Lab_Car_Rental</ownerDesignName>
+<engineerTo>
+<item key="07CF9196-381A-05CE-043C-712AC17EA917" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>65798A2F-3B2B-D038-F916-B60FA09E16E1</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="5935EA99-E62B-A7FB-65FF-8AF7867E8B73" name="Payment PK">
+<createdBy>npoly</createdBy>
+<createdTime>2025-09-22 18:47:23 UTC</createdTime>
+<ownerDesignName>Relational_Example_Lab_Car_Rental</ownerDesignName>
+<engineerTo>
+<item key="07CF9196-381A-05CE-043C-712AC17EA917" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>2A9BAF65-605A-B42A-01AD-0BB6A9DA798F</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

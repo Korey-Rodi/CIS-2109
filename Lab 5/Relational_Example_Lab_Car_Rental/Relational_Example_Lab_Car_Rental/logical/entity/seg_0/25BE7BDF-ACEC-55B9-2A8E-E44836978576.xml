@@ -1,0 +1,114 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="25BE7BDF-ACEC-55B9-2A8E-E44836978576" name="Rental">
+<createdBy>npoly</createdBy>
+<createdTime>2025-09-22 18:44:10 UTC</createdTime>
+<ownerDesignName>Relational_Example_Lab_Car_Rental</ownerDesignName>
+<engineerTo>
+<item key="07CF9196-381A-05CE-043C-712AC17EA917" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Rental_Id" id="65798A2F-3B2B-D038-F916-B60FA09E16E1">
+<createdBy>npoly</createdBy>
+<createdTime>2025-09-22 18:44:15 UTC</createdTime>
+<ownerDesignName>Relational_Example_Lab_Car_Rental</ownerDesignName>
+<engineerTo>
+<item key="07CF9196-381A-05CE-043C-712AC17EA917" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Start_Date" id="112974AB-EA49-4F71-D7E2-D6AC712C1711">
+<createdBy>npoly</createdBy>
+<createdTime>2025-09-22 18:44:16 UTC</createdTime>
+<ownerDesignName>Relational_Example_Lab_Car_Rental</ownerDesignName>
+<engineerTo>
+<item key="07CF9196-381A-05CE-043C-712AC17EA917" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Return_Date" id="A9AB940C-E7A2-05F5-31D2-8642C1D38B01">
+<createdBy>npoly</createdBy>
+<createdTime>2025-09-22 18:44:16 UTC</createdTime>
+<ownerDesignName>Relational_Example_Lab_Car_Rental</ownerDesignName>
+<engineerTo>
+<item key="07CF9196-381A-05CE-043C-712AC17EA917" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Total_Cost" id="66B38787-7C0E-8589-8BA7-637354AD762F">
+<createdBy>npoly</createdBy>
+<createdTime>2025-09-22 18:44:41 UTC</createdTime>
+<ownerDesignName>Relational_Example_Lab_Car_Rental</ownerDesignName>
+<engineerTo>
+<item key="07CF9196-381A-05CE-043C-712AC17EA917" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>11</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,11,2</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Customer_Id" id="4AA7301A-2789-2435-9D52-2763CBBD8EF1">
+<createdBy>npoly</createdBy>
+<createdTime>2025-09-22 18:44:56 UTC</createdTime>
+<generatorID>16F73A87-8A4E-60E6-6326-2B3AA50E39BC</generatorID>
+<ownerDesignName>Relational_Example_Lab_Car_Rental</ownerDesignName>
+<engineerTo>
+<item key="07CF9196-381A-05CE-043C-712AC17EA917" value="true"/>
+</engineerTo>
+<referedAttribute>BDC79BA9-0349-71F2-044D-636D68FC3737</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="VIN" id="28476A57-06B7-C768-9271-AA85B1B8B14B">
+<createdBy>tue63037</createdBy>
+<createdTime>2025-09-30 14:45:36 UTC</createdTime>
+<generatorID>260BF048-6C3D-7D39-E236-5DAF57D955DC</generatorID>
+<ownerDesignName>Relational_Example_Lab_Car_Rental</ownerDesignName>
+<engineerTo>
+<item key="07CF9196-381A-05CE-043C-712AC17EA917" value="true"/>
+</engineerTo>
+<referedAttribute>204024E4-58A0-E5F2-D349-78F516366FE0</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="96DCE929-57DE-8097-BBAB-634B03039D1B" name="Rental PK">
+<createdBy>npoly</createdBy>
+<createdTime>2025-09-22 18:44:23 UTC</createdTime>
+<ownerDesignName>Relational_Example_Lab_Car_Rental</ownerDesignName>
+<engineerTo>
+<item key="07CF9196-381A-05CE-043C-712AC17EA917" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>65798A2F-3B2B-D038-F916-B60FA09E16E1</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

@@ -1,0 +1,84 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="99481EAD-E0F1-EAC3-CF13-2DAC41613F19" name="Lab">
+<createdBy>koreyrodi</createdBy>
+<createdTime>2026-02-17 20:12:23 UTC</createdTime>
+<ownerDesignName>HW1Part2</ownerDesignName>
+<engineerTo>
+<item key="00C6BB50-DD8E-34EB-1EFB-590FBFEEE972" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Lab_ID" id="6DD99BA4-C964-143C-8F6C-EFA4C22E8FBD">
+<createdBy>koreyrodi</createdBy>
+<createdTime>2026-02-18 01:54:30 UTC</createdTime>
+<ownerDesignName>HW1Part2</ownerDesignName>
+<engineerTo>
+<item key="00C6BB50-DD8E-34EB-1EFB-590FBFEEE972" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Lab_Location" id="2FA724EC-7993-708B-00D7-4B820097B1CD">
+<createdBy>koreyrodi</createdBy>
+<createdTime>2026-02-18 01:54:42 UTC</createdTime>
+<ownerDesignName>HW1Part2</ownerDesignName>
+<engineerTo>
+<item key="00C6BB50-DD8E-34EB-1EFB-590FBFEEE972" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Lab_Contact_Person" id="4B324F56-DC03-F258-6063-78CE9ECDE7C9">
+<createdBy>koreyrodi</createdBy>
+<createdTime>2026-02-18 01:54:57 UTC</createdTime>
+<ownerDesignName>HW1Part2</ownerDesignName>
+<engineerTo>
+<item key="00C6BB50-DD8E-34EB-1EFB-590FBFEEE972" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Lab_Phone_Number" id="D45A08CC-8FAA-D175-BB50-FFDDA36F2F80">
+<createdBy>koreyrodi</createdBy>
+<createdTime>2026-02-18 01:55:15 UTC</createdTime>
+<ownerDesignName>HW1Part2</ownerDesignName>
+<engineerTo>
+<item key="00C6BB50-DD8E-34EB-1EFB-590FBFEEE972" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="2C45B89B-9C70-1025-6A64-48C39E1F36D5" name="Lab PK">
+<createdBy>koreyrodi</createdBy>
+<createdTime>2026-02-18 01:54:38 UTC</createdTime>
+<ownerDesignName>HW1Part2</ownerDesignName>
+<engineerTo>
+<item key="00C6BB50-DD8E-34EB-1EFB-590FBFEEE972" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>6DD99BA4-C964-143C-8F6C-EFA4C22E8FBD</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

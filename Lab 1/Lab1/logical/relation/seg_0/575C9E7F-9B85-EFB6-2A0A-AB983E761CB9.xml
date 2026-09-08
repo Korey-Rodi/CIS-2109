@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Buildings to amenities" directorySegmentName="seg_0" id="575C9E7F-9B85-EFB6-2A0A-AB983E761CB9">
+<createdBy>koreyrodi</createdBy>
+<createdTime>2026-01-18 01:05:08 UTC</createdTime>
+<ownerDesignName>Lab1</ownerDesignName>
+<engineerTo>
+<item key="B317E53C-6249-52C5-2168-78467B232497" value="true"/>
+</engineerTo>
+<identifying>false</identifying>
+<optionalSource>false</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>*</sourceCardinality>
+<sourceEntity>7F988F2D-AF2D-5479-99E2-45D6FA9E205C</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>FD1F1491-7707-CA35-8101-2F395F3160A4</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

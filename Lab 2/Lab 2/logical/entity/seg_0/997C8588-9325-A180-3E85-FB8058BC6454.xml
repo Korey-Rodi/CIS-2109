@@ -1,0 +1,72 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="997C8588-9325-A180-3E85-FB8058BC6454" name="Property_Owner">
+<createdBy>koreyrodi</createdBy>
+<createdTime>2026-01-28 20:42:08 UTC</createdTime>
+<ownerDesignName>Lab 2</ownerDesignName>
+<engineerTo>
+<item key="9FF6454B-3DE6-5AC8-BABF-BD18243903A4" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Property_ID" id="F1E13807-32B4-D24D-D2A4-7CCC78B3B912">
+<createdBy>koreyrodi</createdBy>
+<createdTime>2026-01-28 20:42:54 UTC</createdTime>
+<ownerDesignName>Lab 2</ownerDesignName>
+<engineerTo>
+<item key="9FF6454B-3DE6-5AC8-BABF-BD18243903A4" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Owner_ID" id="FFD8600F-9434-789F-0958-D30009BF73C5">
+<createdBy>koreyrodi</createdBy>
+<createdTime>2026-01-28 20:43:15 UTC</createdTime>
+<ownerDesignName>Lab 2</ownerDesignName>
+<engineerTo>
+<item key="9FF6454B-3DE6-5AC8-BABF-BD18243903A4" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Owner_ID1" id="0A3D238A-FC99-8A1D-AF97-EAC36F1DE452">
+<createdBy>koreyrodi</createdBy>
+<createdTime>2026-01-28 21:48:56 UTC</createdTime>
+<generatorID>C8FF1143-08CA-472F-6A56-E019750CEF7B</generatorID>
+<ownerDesignName>Lab 2</ownerDesignName>
+<engineerTo>
+<item key="9FF6454B-3DE6-5AC8-BABF-BD18243903A4" value="true"/>
+</engineerTo>
+<referedAttribute>F8D36510-6201-0C8B-A7C9-CC53A1AEEA61</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="919C07DE-9813-8427-BB97-D14D1F44C595" name="Property_Owner PK">
+<createdBy>koreyrodi</createdBy>
+<createdTime>2026-01-28 20:43:00 UTC</createdTime>
+<ownerDesignName>Lab 2</ownerDesignName>
+<engineerTo>
+<item key="9FF6454B-3DE6-5AC8-BABF-BD18243903A4" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>F1E13807-32B4-D24D-D2A4-7CCC78B3B912</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

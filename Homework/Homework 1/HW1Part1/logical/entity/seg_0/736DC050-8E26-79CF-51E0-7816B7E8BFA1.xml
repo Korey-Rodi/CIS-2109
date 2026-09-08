@@ -1,0 +1,98 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="736DC050-8E26-79CF-51E0-7816B7E8BFA1" name="Client">
+<createdBy>koreyrodi</createdBy>
+<createdTime>2026-02-16 22:16:53 UTC</createdTime>
+<ownerDesignName>HW1</ownerDesignName>
+<engineerTo>
+<item key="C7785AA1-F003-1BBF-2126-91277D0BAC49" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Client_Number" id="06CBF4E5-61FF-03C8-C1BF-1FEE27CE7B3A">
+<createdBy>koreyrodi</createdBy>
+<createdTime>2026-02-16 22:39:45 UTC</createdTime>
+<ownerDesignName>HW1</ownerDesignName>
+<engineerTo>
+<item key="C7785AA1-F003-1BBF-2126-91277D0BAC49" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Item_Number" id="4DBC6279-83B8-9F40-35B2-B505887ADA0A">
+<createdBy>koreyrodi</createdBy>
+<createdTime>2026-02-16 22:39:32 UTC</createdTime>
+<generatorID>9212DF19-3827-93CE-6BA7-1323C4361007</generatorID>
+<ownerDesignName>HW1</ownerDesignName>
+<engineerTo>
+<item key="C7785AA1-F003-1BBF-2126-91277D0BAC49" value="true"/>
+</engineerTo>
+<referedAttribute>7C8375DE-EAD5-6D02-F116-458E21AF3209</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Client_Name" id="808C15B4-B9A4-8FDC-A2A8-13C5755F2D5A">
+<createdBy>koreyrodi</createdBy>
+<createdTime>2026-02-16 22:40:01 UTC</createdTime>
+<ownerDesignName>HW1</ownerDesignName>
+<engineerTo>
+<item key="C7785AA1-F003-1BBF-2126-91277D0BAC49" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Client_Address" id="04B57BC9-D52F-02B7-5B28-11AB101BD0B2">
+<createdBy>koreyrodi</createdBy>
+<createdTime>2026-02-16 22:40:26 UTC</createdTime>
+<ownerDesignName>HW1</ownerDesignName>
+<engineerTo>
+<item key="C7785AA1-F003-1BBF-2126-91277D0BAC49" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Item_Number1" id="19A810FE-83FB-8477-1488-AE41CE4BEBF0">
+<createdBy>koreyrodi</createdBy>
+<createdTime>2026-02-16 22:53:12 UTC</createdTime>
+<generatorID>D471DF93-15C7-8F7B-CB69-B1AD57FD2D23</generatorID>
+<ownerDesignName>HW1</ownerDesignName>
+<engineerTo>
+<item key="C7785AA1-F003-1BBF-2126-91277D0BAC49" value="true"/>
+</engineerTo>
+<referedAttribute>7C8375DE-EAD5-6D02-F116-458E21AF3209</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="5B336678-0F37-6F01-715F-3B7B18FA1F69" name="Client PK">
+<createdBy>koreyrodi</createdBy>
+<createdTime>2026-02-16 22:41:21 UTC</createdTime>
+<ownerDesignName>HW1</ownerDesignName>
+<engineerTo>
+<item key="C7785AA1-F003-1BBF-2126-91277D0BAC49" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>06CBF4E5-61FF-03C8-C1BF-1FEE27CE7B3A</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

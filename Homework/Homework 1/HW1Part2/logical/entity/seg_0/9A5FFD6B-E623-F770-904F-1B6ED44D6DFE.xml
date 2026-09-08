@@ -1,0 +1,47 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="9A5FFD6B-E623-F770-904F-1B6ED44D6DFE" name="Supply_Order_Item">
+<createdBy>koreyrodi</createdBy>
+<createdTime>2026-02-18 02:33:13 UTC</createdTime>
+<ownerDesignName>HW1Part2</ownerDesignName>
+<engineerTo>
+<item key="00C6BB50-DD8E-34EB-1EFB-590FBFEEE972" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Supply_ID" id="0DC47CCE-F459-3B56-E684-1E387CEB71CF">
+<createdBy>koreyrodi</createdBy>
+<createdTime>2026-02-18 02:33:35 UTC</createdTime>
+<generatorID>9DD47CDF-372E-B864-1917-A5F661A44061</generatorID>
+<ownerDesignName>HW1Part2</ownerDesignName>
+<engineerTo>
+<item key="00C6BB50-DD8E-34EB-1EFB-590FBFEEE972" value="true"/>
+</engineerTo>
+<referedAttribute>88D87C3F-CA96-89E1-CA2E-8F19B0A434E5</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Item_ID" id="5B18B021-3700-82C3-0141-EC9A136E6C6D">
+<createdBy>koreyrodi</createdBy>
+<createdTime>2026-02-18 02:33:56 UTC</createdTime>
+<generatorID>066EFDB5-B253-5CC6-DFA5-F325DA205E50</generatorID>
+<ownerDesignName>HW1Part2</ownerDesignName>
+<engineerTo>
+<item key="00C6BB50-DD8E-34EB-1EFB-590FBFEEE972" value="true"/>
+</engineerTo>
+<referedAttribute>71EF7669-73E8-5A0B-0BC8-0E2577AA2A9E</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+</Entity>

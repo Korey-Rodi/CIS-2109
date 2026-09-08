@@ -1,0 +1,119 @@
+--- SQL is not case sensitive and don't worry about spaces and new lines:
+SELECT customEr_id, name
+FROM oT_cuStomers;
+
+--- You can use all kinds of math operators in the where clause:
+select customer_id, name
+from ot_customers
+where customer_id != 130;
+--- where customer_id > >= <= 130;
+--- where customer_id = 130;
+
+--- You can do simple math in the select or where clause:
+select customer_id, name, customer_id*3, 1+3, 'This is a text of 1+3'
+from ot_customers
+where customer_id+1 = 130;
+
+--- Use '' for character comparison and remember:
+--- = means EXACT match
+--- < and > mean alphabetical/numerical ordering
+select customer_id, name
+from ot_customers
+where name = 'General Motors';
+--- where name >'G'; 
+select customer_id, name
+from ot_customers
+where name > 'G'
+order by name; -- The order by clause will order alphabetically 
+
+--- Use the keywork LIKE for partial match along with special characters
+--- % means any number of characters
+--- _ means one character
+--- Strings are case sensitive!
+select customer_id, name
+from ot_customers
+where name LIKE '_G%';
+--- where name LIKE '_g%'; gives different results
+
+---- Single Output math aggregate functions:
+select max(list_price), min(list_price), avg(list_Price), count(product_id)
+from ot_products;
+
+---- Record-level Math functions:
+select list_price, ceil(list_price), floor(list_price),
+round(list_price), round(list_price, 1), round(list_price,2),
+round(list_price, -1), round(list_price, -2),
+trunc(list_price)
+from ot_products;
+
+---- Character Field Functions
+select name, substr(name, 3, 2) AS short_name ---- Retrieve a substring
+from ot_customers;
+-- Use the AS keyword to create an Alias for the column name 
+
+--- Concatenate Names
+select customer_id, name, customer_id||'-'||name AS concNames,
+concat(concat(customer_id, '-'), name)
+from ot_customers
+order by concNames DESC; 
+--- Default is ASC and you may order by any column that participates in the query (even alias)
+
+---- Extract Area code
+select first_name, phone,
+SUBSTR(phone,1,3)||'-'||SUBSTR(phone,4,3)||'-'||SUBSTR(phone,8,3)||'-'||SUBSTR(phone,12,4) AS prettier_phone
+from ot_contacts
+where SUBSTR(phone,1,2) = '+1';
+
+---- Extract Country code
+select phone, Instr(phone,' '), Substr(phone,1,Instr(phone,' ')),
+       Rtrim(Substr(phone,1,Instr(phone,' ')))
+  from ot_contacts;
+
+---- Use Upper/lower to ignore case:
+select customer_id, name
+  from ot_customers
+ where upper(name) LIKE '%G%';
+
+----- Date functions
+select order_date, to_char(order_date, 'Day Month Year'),
+       next_day(order_date, 'Wednesday') AS Next_AVL_Ship_Date,
+       add_months(order_date, 1) AS due_date
+from ot_orders;
+
+/*When inserting dates always use to_date. This allows the DBMS to
+recognise that this field has a date structure with days, months, years
+etc */
+select *
+from ot_orders
+where order_date = to_date('11-17-2016', 'MM-DD-YYYY');
+/* Same as: 
+where order_date = to_date('11/17/2016', 'MM/DD/YYYY'); 
+where order_date = to_date('11 17 2016', 'MM DD YYYY');
+where order_date = to_date('11 17 16', 'MM DD YY');
+or any other date format you prefer*/
+
+---- NULLS:
+---- NULLS do not exist! Therefore, nothing can be = to null
+Select * ---- * means all columns
+from ot_employees
+where last_renewal_date IS NOT null; --- Use IS NULL or IS NOT NULL
+/* nothing is equal, larger or smaller than null, terefore the following will give empty results: 
+where last_renewal_date > null;
+where last_renewal_date < null;
+where last_renewal_date = null; */ 
+
+--- Nothing can be added to null:
+Select employee_id, employee_id*3, employee_id + NULL, employee_id*NULL 
+from ot_employees ; --- empty plus something is empty
+
+---- NVL function to substitue NULLS:
+select location_id, state, NVL(state, 'Undefined')
+from ot_locations;
+--- The alternative value must match the datatype of the field
+
+--- As other functions, NVL can be used in WHERE clause
+select *
+from ot_locations
+where nvl(state, 'Not Defined') > 'A';
+--- very different from: 
+--- where state > 'A';

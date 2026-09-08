@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<LogicalDesign class="oracle.dbtools.crest.model.design.logical.LogicalDesign" name="Logical" id="9B61B412-4338-EA89-3214-256452A2EE4A" mainViewID="FDB037AA-B292-E7A6-39D4-0FAED48B2047">
+<createdBy>npoly</createdBy>
+<createdTime>2025-09-22 17:16:28 UTC</createdTime>
+<ownerDesignName>Relational_Example_Lab_Car_Rental</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+</LogicalDesign>

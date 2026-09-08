@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="Relational_Example_Lab_Car_Rental" id="051990B8-CD31-B55E-94FB-7CE74BB164F3" version="3.5">
+<createdBy>npoly</createdBy>
+<createdTime>2025-09-22 17:16:28 UTC</createdTime>
+<ownerDesignName>Relational_Example_Lab_Car_Rental</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>051990B8-CD31-B55E-94FB-7CE74BB164F3</designId>
+</OSDM_Design>

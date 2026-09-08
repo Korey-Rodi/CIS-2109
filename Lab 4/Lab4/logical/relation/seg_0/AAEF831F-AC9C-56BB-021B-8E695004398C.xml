@@ -1,0 +1,60 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Relation_36" directorySegmentName="seg_0" id="AAEF831F-AC9C-56BB-021B-8E695004398C">
+<createdBy>koreyrodi</createdBy>
+<createdTime>2026-02-06 21:35:21 UTC</createdTime>
+<ownerDesignName>Lab4</ownerDesignName>
+<engineerTo>
+<item key="9FF6454B-3DE6-5AC8-BABF-BD18243903A4" value="true"/>
+</engineerTo>
+<sourcePk>291040C1-95A6-3728-4386-D33DB5490DD5</sourcePk>
+<identifying>false</identifying>
+<optionalSource>false</optionalSource>
+<optionalTarget>true</optionalTarget>
+<sourceCardinality>*</sourceCardinality>
+<sourceEntity>EA91B15E-B34D-401C-8481-F387A886C4B1</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>3514541C-471C-E200-5559-26427BEBBC3D</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<attribute name="Commission" id="019FE08E-637B-0257-EA03-4FE056EB610E">
+<createdBy>koreyrodi</createdBy>
+<createdTime>2026-02-06 21:35:24 UTC</createdTime>
+<ownerDesignName>Lab4</ownerDesignName>
+<engineerTo>
+<item key="9FF6454B-3DE6-5AC8-BABF-BD18243903A4" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</attribute>
+<attribute name="Commission_Check_Date" id="3FBFD731-D37B-D80A-A53E-4F034B7D02B8">
+<createdBy>koreyrodi</createdBy>
+<createdTime>2026-02-06 21:36:49 UTC</createdTime>
+<ownerDesignName>Lab4</ownerDesignName>
+<engineerTo>
+<item key="9FF6454B-3DE6-5AC8-BABF-BD18243903A4" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</attribute>
+<attribute name="Commission_Check_Amount" id="C6E31CFD-D157-2DCD-B261-CC1DAE508CC0">
+<createdBy>koreyrodi</createdBy>
+<createdTime>2026-02-06 21:38:13 UTC</createdTime>
+<ownerDesignName>Lab4</ownerDesignName>
+<engineerTo>
+<item key="9FF6454B-3DE6-5AC8-BABF-BD18243903A4" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT043</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</attribute>
+</attributes>
+</Relation>

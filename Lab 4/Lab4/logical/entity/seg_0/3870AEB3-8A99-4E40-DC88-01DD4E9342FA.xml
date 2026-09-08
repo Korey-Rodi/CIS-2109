@@ -1,0 +1,86 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="3870AEB3-8A99-4E40-DC88-01DD4E9342FA" name="Listing_Detail">
+<createdBy>koreyrodi</createdBy>
+<createdTime>2026-01-30 20:10:51 UTC</createdTime>
+<ownerDesignName>Lab4</ownerDesignName>
+<engineerTo>
+<item key="9FF6454B-3DE6-5AC8-BABF-BD18243903A4" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Deduction_Date" id="96C7BB96-CC16-16B8-9CA7-83E2B0EEEE1F">
+<createdBy>koreyrodi</createdBy>
+<createdTime>2026-01-30 20:23:23 UTC</createdTime>
+<ownerDesignName>Lab4</ownerDesignName>
+<engineerTo>
+<item key="9FF6454B-3DE6-5AC8-BABF-BD18243903A4" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Listing_ID" id="3FB67E3F-D99B-608A-56B9-510E640C7C4B">
+<createdBy>koreyrodi</createdBy>
+<createdTime>2026-01-30 20:26:58 UTC</createdTime>
+<generatorID>0E846012-A645-A833-BC53-D319C82734BA</generatorID>
+<ownerDesignName>Lab4</ownerDesignName>
+<engineerTo>
+<item key="9FF6454B-3DE6-5AC8-BABF-BD18243903A4" value="true"/>
+</engineerTo>
+<referedAttribute>D4D68092-9BCE-4423-C6DA-DF7166141929</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Listing_Price" id="FC9EE1FE-9DE8-02E9-8CA8-2B1CE15E97E4">
+<createdBy>koreyrodi</createdBy>
+<createdTime>2026-01-30 20:21:56 UTC</createdTime>
+<ownerDesignName>Lab4</ownerDesignName>
+<engineerTo>
+<item key="9FF6454B-3DE6-5AC8-BABF-BD18243903A4" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT043</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Price_Deduction" id="D27E152B-9101-0DF0-4669-7510C02776D7">
+<createdBy>koreyrodi</createdBy>
+<createdTime>2026-01-30 20:23:00 UTC</createdTime>
+<ownerDesignName>Lab4</ownerDesignName>
+<engineerTo>
+<item key="9FF6454B-3DE6-5AC8-BABF-BD18243903A4" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT043</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="3F756757-A53C-9137-0DD9-52FD267A5331" name="Listing_Details PK">
+<createdBy>koreyrodi</createdBy>
+<createdTime>2026-01-30 21:06:53 UTC</createdTime>
+<ownerDesignName>Lab4</ownerDesignName>
+<engineerTo>
+<item key="9FF6454B-3DE6-5AC8-BABF-BD18243903A4" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>96C7BB96-CC16-16B8-9CA7-83E2B0EEEE1F</attributeRef>
+<attributeRef>3FB67E3F-D99B-608A-56B9-510E640C7C4B</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

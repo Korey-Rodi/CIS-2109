@@ -1,0 +1,60 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Ownership" directorySegmentName="seg_0" id="8F58B6EF-2E84-8EA6-4838-E2CBAC45F8A6">
+<createdBy>koreyrodi</createdBy>
+<createdTime>2026-01-30 20:29:22 UTC</createdTime>
+<ownerDesignName>Lab3</ownerDesignName>
+<engineerTo>
+<item key="9FF6454B-3DE6-5AC8-BABF-BD18243903A4" value="true"/>
+</engineerTo>
+<identifying>false</identifying>
+<nameOnTarget>Owns</nameOnTarget>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>*</sourceCardinality>
+<sourceEntity>0C3FE2CF-FB06-3788-7728-138C1702798A</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>C89BF756-47E0-A54F-C599-ABDF2780E154</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<attribute name="Ownership_Percentage" id="261A6D53-7329-46E8-531B-678AFF74EAD6">
+<createdBy>koreyrodi</createdBy>
+<createdTime>2026-01-30 20:30:09 UTC</createdTime>
+<ownerDesignName>Lab3</ownerDesignName>
+<engineerTo>
+<item key="9FF6454B-3DE6-5AC8-BABF-BD18243903A4" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</attribute>
+<attribute name="Ownership_Begin" id="7B178263-9F1B-5756-CD59-DDD8E9464945">
+<createdBy>koreyrodi</createdBy>
+<createdTime>2026-01-30 20:32:33 UTC</createdTime>
+<ownerDesignName>Lab3</ownerDesignName>
+<engineerTo>
+<item key="9FF6454B-3DE6-5AC8-BABF-BD18243903A4" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</attribute>
+<attribute name="Ownership_End" id="8CC94EB9-DE85-22F6-1BBE-C32ABFB03E63">
+<createdBy>koreyrodi</createdBy>
+<createdTime>2026-01-30 20:32:46 UTC</createdTime>
+<ownerDesignName>Lab3</ownerDesignName>
+<engineerTo>
+<item key="9FF6454B-3DE6-5AC8-BABF-BD18243903A4" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</attribute>
+</attributes>
+</Relation>

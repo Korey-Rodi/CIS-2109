@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Relation_8" directorySegmentName="seg_0" id="615FD02A-DD76-A1BB-4A3A-FD4B9957D34C">
+<createdBy>npoly</createdBy>
+<createdTime>2025-09-22 18:46:06 UTC</createdTime>
+<ownerDesignName>Relational_Example_Lab_Car_Rental</ownerDesignName>
+<engineerTo>
+<item key="07CF9196-381A-05CE-043C-712AC17EA917" value="true"/>
+</engineerTo>
+<sourcePk>5935EA99-E62B-A7FB-65FF-8AF7867E8B73</sourcePk>
+<targetPk>96DCE929-57DE-8097-BBAB-634B03039D1B</targetPk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>true</optionalTarget>
+<sourceCardinality>*</sourceCardinality>
+<sourceEntity>66A0077E-7EE5-7419-5837-D73F7E4FBF94</sourceEntity>
+<targetCardinalityString>1</targetCardinalityString>
+<targetEntity>25BE7BDF-ACEC-55B9-2A8E-E44836978576</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

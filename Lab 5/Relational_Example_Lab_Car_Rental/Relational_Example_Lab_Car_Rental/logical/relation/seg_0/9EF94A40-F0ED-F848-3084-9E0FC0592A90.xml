@@ -1,0 +1,33 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Preference" directorySegmentName="seg_0" id="9EF94A40-F0ED-F848-3084-9E0FC0592A90">
+<createdBy>npoly</createdBy>
+<createdTime>2025-09-22 18:43:22 UTC</createdTime>
+<ownerDesignName>Relational_Example_Lab_Car_Rental</ownerDesignName>
+<engineerTo>
+<item key="07CF9196-381A-05CE-043C-712AC17EA917" value="true"/>
+</engineerTo>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>*</sourceCardinality>
+<sourceEntity>FAAF65F0-5AAD-136E-93E7-79D4D18A1657</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>8FDF0B5D-5732-6BE5-2719-9BC22890EB9A</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<attribute name="Rank" id="B6FDF464-8C37-8FC2-3FB8-B62523DC8982">
+<createdBy>npoly</createdBy>
+<createdTime>2025-09-22 18:43:30 UTC</createdTime>
+<ownerDesignName>Relational_Example_Lab_Car_Rental</ownerDesignName>
+<engineerTo>
+<item key="07CF9196-381A-05CE-043C-712AC17EA917" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</attribute>
+</attributes>
+</Relation>

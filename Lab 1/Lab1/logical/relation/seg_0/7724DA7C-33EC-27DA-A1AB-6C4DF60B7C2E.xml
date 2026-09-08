@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Buildings to Apartments" directorySegmentName="seg_0" id="7724DA7C-33EC-27DA-A1AB-6C4DF60B7C2E">
+<createdBy>koreyrodi</createdBy>
+<createdTime>2026-01-18 01:04:50 UTC</createdTime>
+<ownerDesignName>Lab1</ownerDesignName>
+<engineerTo>
+<item key="B317E53C-6249-52C5-2168-78467B232497" value="true"/>
+</engineerTo>
+<identifying>false</identifying>
+<nameOnSource>Has</nameOnSource>
+<nameOnTarget>In</nameOnTarget>
+<optionalSource>false</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>*</sourceCardinality>
+<sourceEntity>7F988F2D-AF2D-5479-99E2-45D6FA9E205C</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>3FC674C8-ADAE-E7DA-8413-7D8043E0B1F4</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

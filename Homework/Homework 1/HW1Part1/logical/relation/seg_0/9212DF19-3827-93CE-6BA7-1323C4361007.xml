@@ -1,0 +1,73 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Relation_4" directorySegmentName="seg_0" id="9212DF19-3827-93CE-6BA7-1323C4361007">
+<createdBy>koreyrodi</createdBy>
+<createdTime>2026-02-16 22:25:10 UTC</createdTime>
+<ownerDesignName>HW1</ownerDesignName>
+<engineerTo>
+<item key="C7785AA1-F003-1BBF-2126-91277D0BAC49" value="true"/>
+</engineerTo>
+<sourcePk>3AB70948-7412-A44F-1966-6EADC2D49D93</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>218A8CA9-176D-AE62-0AD9-D673D97DFE31</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>736DC050-8E26-79CF-51E0-7816B7E8BFA1</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<attribute name="Purchase" id="D4685D26-7966-D5E4-CA94-81A6526E0295">
+<createdBy>koreyrodi</createdBy>
+<createdTime>2026-02-16 22:25:14 UTC</createdTime>
+<ownerDesignName>HW1</ownerDesignName>
+<engineerTo>
+<item key="C7785AA1-F003-1BBF-2126-91277D0BAC49" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</attribute>
+<attribute name="Purchase_Cost" id="1707CA31-DEB2-17B2-BBE4-1A746120AAE0">
+<createdBy>koreyrodi</createdBy>
+<createdTime>2026-02-16 22:54:34 UTC</createdTime>
+<ownerDesignName>HW1</ownerDesignName>
+<engineerTo>
+<item key="C7785AA1-F003-1BBF-2126-91277D0BAC49" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT043</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</attribute>
+<attribute name="Purchase_Date" id="40F3E8A6-6EB9-4D8B-C6A7-DF1A0AAFACED">
+<createdBy>koreyrodi</createdBy>
+<createdTime>2026-02-16 22:55:15 UTC</createdTime>
+<ownerDesignName>HW1</ownerDesignName>
+<engineerTo>
+<item key="C7785AA1-F003-1BBF-2126-91277D0BAC49" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</attribute>
+<attribute name="Item_Condition" id="B339D574-4BE3-1EEC-8937-41BAC320E234">
+<createdBy>koreyrodi</createdBy>
+<createdTime>2026-02-16 22:55:45 UTC</createdTime>
+<ownerDesignName>HW1</ownerDesignName>
+<engineerTo>
+<item key="C7785AA1-F003-1BBF-2126-91277D0BAC49" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</attribute>
+</attributes>
+</Relation>

@@ -1,0 +1,177 @@
+------- Boolean operators: NOT, AND, OR 
+select * 
+  from ot_locations
+ where city     = 'Roma' 
+    or not city = 'Venice';
+--- When evaluating the results of these statements it may be useful to think in terms of truth values. 
+--- The DBMS will evaluate the truth value for each record of each statement separately and then combine. 
+--- So the revious example gives the same result as: 
+select * 
+  from ot_locations
+ where not city = 'Venice';
+
+
+--- You can use multiple where clauses combined with operators BUT be aware of the natural 
+--- precedence of operators or use parenthesis: NOT then AND then OR  
+Select employee_id, first_name, last_name,job_title  
+  from ot_employees 
+ where job_title = 'Accountant' and not hire_date > to_date('01-APR-16', 'DD-MON-YY');
+ ---   Equivalent to: 
+ ---   (job_title = 'Accountant') and (not hire_date > to_date('01-APR-16', 'DD-MON-YY'));
+
+ 
+--- Precedence of OPERATORS:    
+  Select * 
+    from ot_employees 
+   where job_title = 'Accountant'      
+      or job_title = 'Programmer'
+      and not hire_date > to_date('01-APR-16', 'DD-MON-YY');
+--- Is the same as:'Accountant' OR ('Programmer' with not hire date >...)
+--- Use parenthesis to chancge the precedence: ( where (job_title = 'Accountant' or job_title = 'Programmer')
+---                                                and not hire_date > to_date('01-APR-16', 'DD-MON-YY') )
+
+--- Precedence of OPERATORS:    
+  Select * 
+    from ot_employees 
+   where job_title = 'Accountant'      
+      and not hire_date > to_date('01-APR-16', 'DD-MON-YY')
+      or job_title = 'Programmer';
+--- Is the same as:'Programmer' OR ('Accountant' with not hire date >...)
+
+---  IN/ NOT IN 
+  Select * 
+    from ot_employees 
+   where job_title IN('Accountant','Programmer');
+
+  Select * 
+    from ot_employees 
+   where job_title  NOT IN('Accountant','Programmer');
+--- same as where NOT job_title IN('Accountant','Programmer');
+
+---- Between/ NOT BETWEEN 
+Select product_id, list_price 
+    from ot_products 
+   where list_price between 104.88 and 200; -- Inclusive! 
+
+Select product_id, list_price 
+    from ot_products 
+   where list_price not between 104.88 and 200;
+--- same as where not list_price  between 104.88 and 200;
+
+---- Distinct
+select distinct first_name --Use the distincs to get unique records 
+  from ot_contacts
+ where first_name LIKE 'C%'
+order by first_name;  --- You only see one Charlies if you add Distinct 
+
+select distinct first_name, last_name -- The distinct acts on the entire output record 
+  from ot_contacts
+ where first_name LIKE 'C%'
+order by first_name;  --- Two Charlies  
+
+-- Order by 
+select first_name, last_name  
+  from ot_contacts
+ where first_name LIKE 'Cha%'
+order by last_name asc, first_name asc;
+--- You can order by any of the columns included in the tables of the FROM clause, regardless of whether you select them or not.
+--- When using multiple columns in the order by, the second column is used only when two records tie for the first column
+
+--------------------------------------------------------------------------------------
+---- Group by 
+--------------------------------------------------------------------------------------
+--- Group contacts by first name: 
+select first_name 
+  from ot_contacts
+ where first_name LIKE 'Cha%'
+ group by first_name;  --- The results are 1 record per group 
+
+--- Group contacts by first name and count how many records in each group: 
+select first_name, count(*) 
+  from ot_contacts
+ where first_name LIKE 'Cha%'
+ group by first_name;
+
+--- You can choose to create any groups, but always be mindful that ALL columns included in the SELECT
+--- other than aggregate columns, NEED to be also included in the GROUP BY:
+select first_name, last_name, count(*) 
+  from ot_contacts
+ where first_name LIKE 'Cha%'
+ group by first_name, last_name;
+
+--- But this will give error: 
+select first_name, last_name, count(*) 
+  from ot_contacts
+ where first_name LIKE 'Cha%'
+ group by first_name;
+
+--- The opossite is not true. You can print less that what you are grouping with: 
+select last_name, count(*) 
+  from ot_contacts
+ where first_name LIKE 'Cha%'
+ group by first_name, last_name
+ order by first_name asc;  -- You can still order by any column of the tables 
+
+
+select first_name, count(last_name)  -- The distinct acts on the entire output record 
+  from ot_contacts
+ where first_name LIKE 'Cha%'
+group by first_name
+order by first_name asc;
+
+--- Count employees by: manager_id, job_title, hire month and combinations:
+  select  job_title,manager_id, count(*)
+    from ot_employees
+   where last_renewal_date is  null
+group by job_title,manager_id
+order by job_title,manager_id;
+--- In the WHERE clause you can limit the results of the query based on requirements built using any 
+--- of the columns in the tables of the FROM clause. 
+
+  select  job_title,manager_id, count(*)
+    from ot_employees
+group by job_title,manager_id
+  Having manager_id = 4
+order by job_title,manager_id;
+
+--- In the HAVING clause you can use only the columns that are associated with groups, 
+--- so only the group-defining columns of the select and any aggregare columns (whether included in the select or not)
+  select manager_id, job_title, count(*)
+    from ot_employees 
+  group by manager_id, job_title
+  having count(*) > 1 
+  order by job_title;
+
+  select manager_id, job_title, max(hire_date)
+    from ot_employees 
+  group by manager_id, job_title
+  having count(*) > 1 
+  order by job_title;
+  
+---- More examples: 
+
+--- Count employees  job_title and hire month but only those with manager_id = 4.Where or Having?
+--- Both!
+  
+--- Count employees, by job_title and hire month but only those hired in December. Where or Having?
+--- Both, for example:
+  select job_title, to_char(hire_date, 'Month'), count(*)
+    from ot_employees 
+  group by job_title, to_char(hire_date, 'Month')
+  having to_char(hire_date, 'Month') = 'December '
+  order by job_title, to_char(hire_date, 'Month'); 
+
+--- Count employees by job_title and hire month but only those empty last_renewal_date. Where or Having?  
+--- where and only where 
+select job_title, to_char(hire_date, 'Month'), count(*)
+    from ot_employees 
+   where last_renewal_date is null 
+  group by job_title, to_char(hire_date, 'Month')
+  order by job_title, to_char(hire_date, 'Month');  
+ -- Can you get the same results using having??? 
+ 
+
+
+ 
+ 
+ 

@@ -1,0 +1,45 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="7F988F2D-AF2D-5479-99E2-45D6FA9E205C" name="Buildings">
+<createdBy>koreyrodi</createdBy>
+<createdTime>2026-01-18 01:04:05 UTC</createdTime>
+<ownerDesignName>Lab1</ownerDesignName>
+<engineerTo>
+<item key="B317E53C-6249-52C5-2168-78467B232497" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Building_ID" id="384AF0F7-4A24-4316-077C-54758AC88FC7">
+<createdBy>koreyrodi</createdBy>
+<createdTime>2026-01-18 01:07:03 UTC</createdTime>
+<ownerDesignName>Lab1</ownerDesignName>
+<engineerTo>
+<item key="B317E53C-6249-52C5-2168-78467B232497" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="807EAE20-6B63-626B-1FDE-F13FB1F25108" name="Buildings PK">
+<createdBy>koreyrodi</createdBy>
+<createdTime>2026-01-18 01:07:16 UTC</createdTime>
+<ownerDesignName>Lab1</ownerDesignName>
+<engineerTo>
+<item key="B317E53C-6249-52C5-2168-78467B232497" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>384AF0F7-4A24-4316-077C-54758AC88FC7</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

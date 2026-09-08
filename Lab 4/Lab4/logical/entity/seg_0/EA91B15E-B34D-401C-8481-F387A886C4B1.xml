@@ -1,0 +1,111 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="EA91B15E-B34D-401C-8481-F387A886C4B1" name="Transaction">
+<createdBy>koreyrodi</createdBy>
+<createdTime>2026-01-30 20:13:16 UTC</createdTime>
+<ownerDesignName>Lab4</ownerDesignName>
+<engineerTo>
+<item key="9FF6454B-3DE6-5AC8-BABF-BD18243903A4" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Offer_Date" id="2705C20C-118E-FE0C-B31C-B9BF6A612AFA">
+<createdBy>koreyrodi</createdBy>
+<createdTime>2026-01-30 20:47:13 UTC</createdTime>
+<generatorID>FF58F6C8-5539-C5AF-6125-9EEB92F84A6F</generatorID>
+<ownerDesignName>Lab4</ownerDesignName>
+<engineerTo>
+<item key="9FF6454B-3DE6-5AC8-BABF-BD18243903A4" value="true"/>
+</engineerTo>
+<referedAttribute>B684D71A-D55F-5B18-2033-C7C308F52E0C</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Transaction_Date" id="247FCA3A-5E3D-914D-4E4D-EE9B6F8E7DAB">
+<createdBy>koreyrodi</createdBy>
+<createdTime>2026-01-30 20:48:25 UTC</createdTime>
+<ownerDesignName>Lab4</ownerDesignName>
+<engineerTo>
+<item key="9FF6454B-3DE6-5AC8-BABF-BD18243903A4" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Transaction_Type" id="E8AFA7CB-F741-7CB9-93EC-D5355764F948">
+<createdBy>koreyrodi</createdBy>
+<createdTime>2026-01-30 20:49:19 UTC</createdTime>
+<ownerDesignName>Lab4</ownerDesignName>
+<engineerTo>
+<item key="9FF6454B-3DE6-5AC8-BABF-BD18243903A4" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Final_Price" id="17CB42A4-6129-84FB-E7B5-1DE826F8FA65">
+<createdBy>koreyrodi</createdBy>
+<createdTime>2026-01-30 21:27:36 UTC</createdTime>
+<ownerDesignName>Lab4</ownerDesignName>
+<engineerTo>
+<item key="9FF6454B-3DE6-5AC8-BABF-BD18243903A4" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT043</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Transaction_ID" id="BF62802D-05A7-6E21-779B-23395A8837C2">
+<createdBy>koreyrodi</createdBy>
+<createdTime>2026-01-30 21:32:02 UTC</createdTime>
+<ownerDesignName>Lab4</ownerDesignName>
+<engineerTo>
+<item key="9FF6454B-3DE6-5AC8-BABF-BD18243903A4" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Offer_ID" id="35B80502-3E6B-CC6D-AA4F-0CDA365D1D98">
+<createdBy>koreyrodi</createdBy>
+<createdTime>2026-02-04 22:01:19 UTC</createdTime>
+<generatorID>FF58F6C8-5539-C5AF-6125-9EEB92F84A6F</generatorID>
+<ownerDesignName>Lab4</ownerDesignName>
+<engineerTo>
+<item key="9FF6454B-3DE6-5AC8-BABF-BD18243903A4" value="true"/>
+</engineerTo>
+<referedAttribute>1E9CD8A6-AB7C-7942-9D08-B4D892EA9D34</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="291040C1-95A6-3728-4386-D33DB5490DD5" name="Transaction PK">
+<createdBy>koreyrodi</createdBy>
+<createdTime>2026-01-30 21:25:41 UTC</createdTime>
+<ownerDesignName>Lab4</ownerDesignName>
+<engineerTo>
+<item key="9FF6454B-3DE6-5AC8-BABF-BD18243903A4" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>BF62802D-05A7-6E21-779B-23395A8837C2</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

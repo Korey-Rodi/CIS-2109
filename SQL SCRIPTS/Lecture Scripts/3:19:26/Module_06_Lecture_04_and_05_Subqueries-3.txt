@@ -1,0 +1,157 @@
+----- Subqueries 
+----- Find the names of the employees who have completed at least one certification or are in the process of doing so
+----- Write the query using Joins, non-correlates, correlated, where exists
+--- Joins: 
+select distinct e.* 
+  from ot_employees e INNER JOIN ot_certification c ON e.employee_id = c.employee_id
+ WHERE c.certificate_id is not null;
+--- Noice that without the keyword DISTINCT you see more records, that is because you see each employee as may times as they have certificates. 
+--- also notice that you can use Table_Alias.* to select all columns from a specific table 
+--- Remember that JOINS are typically more efficient than subqueries and allow for the selection of columns from more than one tables (in this 
+--- example you can also see certification information)
+
+--- Non-Correlated:
+select * 
+  from ot_employees e 
+ where  e.employee_id IN (select c.employee_id 
+                            from ot_certification c);
+--- Now the from clause only includes ot_employees, so you can only select coluns from that table. 
+
+--- Correlated:
+select * 
+  from ot_employees e 
+ where  e.employee_id IN (select c.employee_id 
+                            from ot_certification c
+                           where e.employee_id = c.employee_id);
+---- Where exists:                        
+select * 
+  from ot_employees e 
+ where  EXISTS (select employee_id 
+                         from ot_certification c
+                        where e.employee_id = c.employee_id);
+ 
+----- Find the names of the employees who have NOT completed any certification and are NOT in the process of doing so
+----- Write the query using Joins, non-correlated, correlated, where exists
+select distinct e.* 
+  from ot_employees e left outer JOIN ot_certification c ON e.employee_id = c.employee_id
+ WHERE c.certificate_id is null;
+--- Non-Correlated:
+select * 
+  from ot_employees e 
+ where  e.employee_id NOT IN (select NVL(c.employee_id, -99) 
+                            from ot_certification c);
+--- Try to remove the NVL. What happens? The results are NULL: that is because the DBMS is asked o verify that the employee_id 
+--- is not in a  list of employee_ids that contains blanks (NULLS), so the DBMS cannot answer. If you substitute NULLS before the 
+--- comparison then the DBMS will be able to provide the answer. 
+
+--- Correlated:
+select * 
+  from ot_employees e 
+ where  e.employee_id NOT IN (select c.employee_id 
+                            from ot_certification c
+                           where e.employee_id = c.employee_id);
+
+---- Where exists:                        
+select * 
+  from ot_employees e 
+ where NOT  EXISTS (select employee_id 
+                         from ot_certification c
+                        where e.employee_id = c.employee_id);
+ 
+ 
+-------------------------------------------------------------------------------------------- 
+-----------------------  Set Operators 
+--------------------------------------------------------------------------------------------
+----- Find the employee_ids of employees that have completed either certificate with id=1 OR id =2
+----- Answer the question A. using set operators B. without using set operators
+
+SElect first_name, last_name 
+ from ot_employees e INNER JOIN ot_certification c ON e.employee_id = c.employee_id
+where c.certificate_id = 1
+   or c.certificate_id = 2;
+   
+SElect first_name, last_name 
+ from ot_employees e INNER JOIN ot_certification c ON e.employee_id = c.employee_id
+where c.certificate_id = 1
+union all
+SElect first_name, last_name 
+ from ot_employees e INNER JOIN ot_certification c ON e.employee_id = c.employee_id
+where c.certificate_id = 2;
+
+--- You can see distinct results: 
+SElect distinct first_name, last_name 
+ from ot_employees e INNER JOIN ot_certification c ON e.employee_id = c.employee_id
+where c.certificate_id = 1
+   or c.certificate_id = 2;
+   
+SElect first_name, last_name 
+ from ot_employees e INNER JOIN ot_certification c ON e.employee_id = c.employee_id
+where c.certificate_id = 1
+union 
+SElect first_name, last_name 
+ from ot_employees e INNER JOIN ot_certification c ON e.employee_id = c.employee_id
+where c.certificate_id = 2;
+
+----- Find the employee_ids of employees that have completed certificate with id=1 AND id =2
+----- Answer the question A. using set operators B. without using set operators
+SElect first_name, last_name 
+ from ot_employees e INNER JOIN ot_certification c ON e.employee_id = c.employee_id
+where c.certificate_id = 1
+intersect
+SElect first_name, last_name 
+ from ot_employees e INNER JOIN ot_certification c ON e.employee_id = c.employee_id
+where c.certificate_id = 2;
+
+SElect first_name, last_name 
+ from ot_employees e INNER JOIN ot_certification c ON e.employee_id = c.employee_id
+where c.certificate_id = 1
+  and e.employee_id IN (SElect e.employee_id 
+                         from ot_employees e INNER JOIN ot_certification c ON e.employee_id = c.employee_id
+                        where c.certificate_id = 2);
+
+----- Find the employee_ids of employees that have completed certificate with id=2 AND NOT id =2
+----- Answer the question A. using set operators B. without using set operators
+SElect first_name, last_name
+ from ot_employees e INNER JOIN ot_certification c ON e.employee_id = c.employee_id
+where c.certificate_id = 2
+minus 
+SElect first_name, last_name
+ from ot_employees e INNER JOIN ot_certification c ON e.employee_id = c.employee_id
+where c.certificate_id = 1;
+
+
+SElect first_name, last_name 
+ from ot_employees e INNER JOIN ot_certification c ON e.employee_id = c.employee_id
+where c.certificate_id = 2
+  and e.employee_id NOT IN (SElect e.employee_id 
+                         from ot_employees e INNER JOIN ot_certification c ON e.employee_id = c.employee_id
+                        where c.certificate_id = 1);
+
+---------------- CASE ---------------------------------------------------------
+--- 
+select warehouse_name,  product_id, quantity, 
+       case when quantity < 10 then 'Requires Immediate Supplies'
+            when quantity < 50 then 'Requires Supplies'
+            when quantity < 200 then 'Does not require Supplies'
+            else 'Overstock'
+       end AS Supply_Index
+  from ot_warehouses w inner join ot_inventories i on w.warehouse_id = i.warehouse_id 
+  order by quantity desc; 
+  
+---- The new column defined through the case function can also be used in the where clause:  
+select warehouse_name,  product_id, quantity, 
+       case when quantity < 10 then 'Requires Immediate Supplies'
+            when quantity < 50 then 'Requires Supplies'
+            when quantity < 200 then 'Does not require Supplies'
+            else 'Overstock'
+       end AS Supply_Index
+  from ot_warehouses w inner join ot_inventories i on w.warehouse_id = i.warehouse_id 
+where case when quantity < 10 then 'Requires Immediate Supplies'
+            when quantity < 50 then 'Requires Supplies'
+            when quantity < 200 then 'Does not require Supplies'
+            else 'Overstock'
+       end = 'Overstock'
+  order by quantity desc; 
+  
+  
+  

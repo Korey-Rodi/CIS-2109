@@ -1,0 +1,70 @@
+---- Select locations and corresponding country information
+--- Using the older syntax:
+--- Notice the use of table ALIAS and how columns in the SELECT, WHERE, and all other clauses need to reference their table
+Select c.country_id, country_name, location_id, address
+  from ot_countries c, ot_locations l 
+ where c.country_id = l.country_id
+   and country_name LIKE 'A%'; 
+-- You can add additional requirements using the AND keyword
+-- Be mindful not to use OR instead of AND but you could do: AND ( ... OR ...)                               
+
+
+--- Using the newer syntax:
+SElect c.country_id, country_name, location_id, address
+  from ot_countries c INNER JOIN ot_locations l  ON  c.country_id = l.country_id
+ WHERE country_name LIKE 'A%'; 
+-- Now the addittional requirements start with WHERE
+
+--- Using the NATURAL JOIN  
+SElect country_id, country_name, location_id, address
+  from ot_countries c NATURAL JOIN ot_locations l
+ where country_name LIKE 'A%'; 
+--- Notice how ON is ommitted and that the country_id does not reference a specific table 
+     
+--- ALL countries, and their locations 
+SElect c.country_id, country_name, location_id, address
+  from ot_countries c LEFT OUTER JOIN ot_locations l  ON  c.country_id = l.country_id; 
+--- You could substitute NULLs with something else: 
+SElect c.country_id, country_name, NVL(location_id, -99), NVL(address, 'No address')
+  from ot_countries c LEFT OUTER JOIN ot_locations l  ON  c.country_id = l.country_id; 
+
+--- ONLY countries with no colations:
+SElect c.country_id, country_name, location_id, address
+  from ot_countries c LEFT OUTER JOIN ot_locations l  ON  c.country_id = l.country_id
+ WHERE location_id IS NULL; --- Advise: Use PKs for NULL checks
+
+--- ALL locations and their country 
+SElect c.country_id, country_name, location_id, address
+  from ot_countries c RIGHT OUTER JOIN ot_locations l  ON  c.country_id = l.country_id
+; 
+
+--- ONLY locations with no country 
+SElect c.country_id, country_name, location_id, address
+  from ot_countries c RIGHT OUTER JOIN ot_locations l  ON  c.country_id = l.country_id
+ WHERE c.country_id IS NULL; 
+
+--- Countries with No locations OR locations with NO countries:
+SElect c.country_id, country_name, location_id, address
+  from ot_countries c FULL OUTER JOIN ot_locations l  ON  c.country_id = l.country_id
+ where location_id is null 
+   or c.country_id is null ; 
+
+--- Countries with locations OR locations with countries:
+SElect c.country_id, country_name, location_id, address
+  from ot_countries c FULL OUTER JOIN ot_locations l  ON  c.country_id = l.country_id
+ where location_id is not null 
+   and c.country_id is not null ; -- Same as INNER JOIN 
+
+--- All possible: 
+ select c.country_id, country_name, l.country_id, location_id, address
+  from ot_countries c FULL OUTER JOIN ot_locations l ON c.country_id = l.country_id 
+;
+--- Locations with No countries (we saw this before but you can also use FULL outer):
+ select c.country_id, country_name, l.country_id, location_id, address
+  from ot_countries c FULL OUTER JOIN ot_locations l ON c.country_id = l.country_id 
+ where country_name is null
+;
+
+  
+  
+

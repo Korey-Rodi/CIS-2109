@@ -1,0 +1,132 @@
+--------------  Examples with joins and counts. ----------------------------
+
+--- Count Locations per country name. How can you include the locations without a country?  
+--How can you include the countries with  no locations? Is your count correct??  
+--- Count Locations per country:
+select country_name, count(location_id) 
+  from ot_locations l inner join ot_countries c ON c.country_id = l.country_id 
+  group by country_name ; --- This prints locations with a country  
+  
+select country_name, count(location_id) , count(*) 
+  from ot_locations l left outer join ot_countries c ON c.country_id = l.country_id 
+  group by country_name 
+  order by country_name; 
+--- This prints all locations, even the ones without country but not the countries without locations   
+-- VS 
+select NVL(country_name, 'Undefined Country'), count(location_id), count(*) 
+   from ot_locations l left outer join ot_countries c ON c.country_id = l.country_id 
+group by NVL(country_name, 'Undefined Country')
+order by NVL(country_name, 'Undefined Country'); 
+--- This again prints all locations, even the ones without country but not the countries without locations   
+--- 
+select country_name, count(location_id), count(*)  
+  from ot_locations l right outer join ot_countries c ON c.country_id = l.country_id 
+  group by country_name ; --- This prints all countries, even the ones without locations but not the locations without countries   
+--- Notice the difference between , count(*)  and  count(location_id)
+--- To understand the behaviour of the counts it may be easier to first print the 
+--- intermediate result, the one without the groups: 
+select country_name, location_id
+   from ot_countries c left outer join ot_locations l on c.country_id = l.country_id
+order by country_name; 
+--- Now you can see that for Argentina you can count 1 record and 0 locations 
+
+
+
+----------------------------  Multiple Table Joins ----------------------------
+----------------------------  Multiple Table Joins ----------------------------
+---First join: countries with locations 
+---Second join: countries with locations  and  regions
+Select location_id, address, country_name, region_name   
+from ot_countries c inner join ot_Locations l ON c.country_id    = l.country_id 
+                    inner join ot_regions r ON r.region_id = c.region_id ;
+                    
+---First join: countries with locations 
+---Second join: all regions, even the ones with no locations and countries:
+Select location_id, address, country_name, region_name   
+from ot_countries c inner join ot_Locations l ON c.country_id    = l.country_id 
+                    right outer join ot_regions r ON r.region_id = c.region_id ; 
+
+---First join: all locations even if they do not have countries 
+---Second join: previous data that have a region . The final output is same as two INNER JOINS:                  
+Select location_id, address, country_name, region_name  
+from ot_Locations left outer join ot_countries using(country_id)
+                  inner join ot_regions using(region_id); 
+--------------------  Optional Shorter notation USING keyword -------------------------
+--- When matching columns that have the same name you can use the USING keyword instead of ON
+-------------------- -------------------- -------------------- -------------------- ----
+---First join:  locations even without countries 
+---Second join: even without regions:
+Select location_id, address, country_name, region_name   
+from ot_Locations left outer join ot_countries using(country_id)
+                  left outer join ot_regions using(region_id); 
+
+---First join: countries even without locations
+---Second join: regions even without countries/locations but no locations without regions
+Select location_id, address, country_name, region_name   
+from ot_Locations right outer join ot_countries using(country_id)
+                  right outer join ot_regions using(region_id); 
+
+--------------------------------------------------------------------------------                  
+-------------------------- Self Joins  -----------------------------------------
+--------------------------------------------------------------------------------
+-- Warehouses and hubs 
+select w.warehouse_name AS Wname, h.warehouse_name AS Hname
+  from ot_warehouses w INNER JOIN ot_warehouses h ON w.hub_id = h.warehouse_id; 
+  --- hub_id of the warehouse should be equal to warehouse_id of the hub
+
+--- Warehouses with more employees than their hub
+select w.warehouse_name AS Wname, w.nbr_employees, h.warehouse_name AS Hname, h.nbr_employees
+  from ot_warehouses w INNER JOIN ot_warehouses h ON w.hub_id = h.warehouse_id
+ WHERE w.nbr_employees > h.nbr_employees;
+ 
+--- Count warehouses per hub: 
+select h.warehouse_name, h.warehouse_id, count(w.warehouse_name)
+  from ot_warehouses w right outer  JOIN ot_warehouses h ON w.hub_id = h.warehouse_id
+group by h.warehouse_name, h.warehouse_id;
+
+-- All Warehouses even without hubs 
+select w.warehouse_name AS Wname, h.warehouse_name AS Hname
+  from ot_warehouses w left outer JOIN ot_warehouses h ON w.hub_id = h.warehouse_id; 
+
+-- All Warehouses that could be hubs, even if they are not 
+select w.warehouse_name AS Wname, h.warehouse_name AS Hname
+  from ot_warehouses w right outer JOIN ot_warehouses h ON w.hub_id = h.warehouse_id;
+
+-- Warehouses and hubs and their locations  
+select w.warehouse_id, w.warehouse_name, w.location_id, wl.address,
+       h.warehouse_id As Hub_id, h.warehouse_name As Hub_name, h.location_id, hl.address AS hub_Address
+  from ot_warehouses w  left outer join ot_warehouses h 
+                        on w.hub_id = h.warehouse_id
+                        left outer join ot_locations wl on w.location_id = wl.location_id 
+                        left outer join ot_locations hl on h.location_id = hl.location_id ; 
+
+                       
+------ Rank salespeople based on amount sold or quantities sold: 
+select salesman_id, count(distinct o.order_id), count(*), sum(quantity), sum(quantity*unit_price)  
+  from ot_orders o inner join ot_order_items oi on o.order_id = oi.order_id
+  group by salesman_id
+  order by sum(quantity*unit_price)  ;  
+---- Or include employees table to include the name of salesperson: 
+SELECT SALESMAN_ID,FIRST_NAME , SUM( QUANTITY*UNIT_PRICE), COUNT(DISTINCT O.ORDER_ID), COUNT(O.ORDER_ID)
+  FROM OT_ORDERS O INNER JOIN OT_ORDER_ITEMS OI ON OI.ORDER_ID = O.ORDER_ID
+  LEFT OUTER JOIN OT_EMPLOYEES E ON O.SALESMAN_ID = E.EMPLOYEE_ID
+GROUP BY SALESMAN_ID,FIRST_NAME
+ORDER BY COUNT(DISTINCT O.ORDER_ID);  
+-- Notice the difference between counts: count(O.ORDER_ID) counts records in this example which represents invoice lines 
+
+
+------ Most frequently sold (number of orders) product category? 
+select p.category_id, category_name, count(*), count(distinct oi.order_id), sum(quantity)  
+  from ot_product_categories pc left outer join ot_products p ON pc.category_id = p.category_id
+                                left outer join ot_order_items oi on oi.product_id = p.product_id
+group by p.category_id, category_name; 
+  
+------ Do customers have a favorite salesperson?  
+SELECT SALESMAN_ID,FIRST_NAME , c.name, count(o.order_id)
+  FROM OT_ORDERS O INNER JOIN OT_ORDER_ITEMS OI ON OI.ORDER_ID = O.ORDER_ID
+  LEFT OUTER JOIN OT_EMPLOYEES E ON O.SALESMAN_ID = E.EMPLOYEE_ID
+   left outer join ot_customers c on o.customer_id = c.customer_id
+GROUP BY SALESMAN_ID,FIRST_NAME, c.name 
+order by c.name, count(o.order_id);
+
+

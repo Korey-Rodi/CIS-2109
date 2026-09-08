@@ -1,0 +1,112 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="A22BB129-A1C0-CA75-CB8F-5600F6C92337" name="Restoration">
+<createdBy>koreyrodi</createdBy>
+<createdTime>2026-02-16 22:17:14 UTC</createdTime>
+<ownerDesignName>HW1</ownerDesignName>
+<engineerTo>
+<item key="C7785AA1-F003-1BBF-2126-91277D0BAC49" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Item_Number" id="007F3872-6292-7D4C-E7FB-448CC03E965B">
+<createdBy>koreyrodi</createdBy>
+<createdTime>2026-02-16 22:39:32 UTC</createdTime>
+<generatorID>24D45E48-A48F-267A-3983-884DD093512A</generatorID>
+<ownerDesignName>HW1</ownerDesignName>
+<engineerTo>
+<item key="C7785AA1-F003-1BBF-2126-91277D0BAC49" value="true"/>
+</engineerTo>
+<referedAttribute>7C8375DE-EAD5-6D02-F116-458E21AF3209</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Expert_Number" id="5255520E-B3B2-7156-6942-0CD55172799C">
+<createdBy>koreyrodi</createdBy>
+<createdTime>2026-02-16 22:42:08 UTC</createdTime>
+<generatorID>10803770-A413-A81A-7DED-23B4E2ECBA65</generatorID>
+<ownerDesignName>HW1</ownerDesignName>
+<engineerTo>
+<item key="C7785AA1-F003-1BBF-2126-91277D0BAC49" value="true"/>
+</engineerTo>
+<referedAttribute>E1FEB34C-18D0-7CF5-C7AA-2B55C21EFE61</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Start_Date" id="1E75CD75-8E99-7E7F-94B9-B318ECE71B56">
+<createdBy>koreyrodi</createdBy>
+<createdTime>2026-02-16 22:44:28 UTC</createdTime>
+<ownerDesignName>HW1</ownerDesignName>
+<engineerTo>
+<item key="C7785AA1-F003-1BBF-2126-91277D0BAC49" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="End_Date" id="147161B2-B671-2DB4-4C7A-02957A2F93E0">
+<createdBy>koreyrodi</createdBy>
+<createdTime>2026-02-16 22:44:38 UTC</createdTime>
+<ownerDesignName>HW1</ownerDesignName>
+<engineerTo>
+<item key="C7785AA1-F003-1BBF-2126-91277D0BAC49" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Restoration_Cost" id="6FA8051C-5F74-EF53-A4D7-B5184E9548FA">
+<createdBy>koreyrodi</createdBy>
+<createdTime>2026-02-16 22:45:10 UTC</createdTime>
+<ownerDesignName>HW1</ownerDesignName>
+<engineerTo>
+<item key="C7785AA1-F003-1BBF-2126-91277D0BAC49" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT043</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Added_Value" id="14595B61-9803-163D-4DD3-02E8D2891D8F">
+<createdBy>koreyrodi</createdBy>
+<createdTime>2026-02-16 22:45:31 UTC</createdTime>
+<ownerDesignName>HW1</ownerDesignName>
+<engineerTo>
+<item key="C7785AA1-F003-1BBF-2126-91277D0BAC49" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT043</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Comments" id="94B32134-E941-0A9C-250B-099017F70008">
+<createdBy>koreyrodi</createdBy>
+<createdTime>2026-02-16 22:45:46 UTC</createdTime>
+<ownerDesignName>HW1</ownerDesignName>
+<engineerTo>
+<item key="C7785AA1-F003-1BBF-2126-91277D0BAC49" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+</Entity>

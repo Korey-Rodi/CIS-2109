@@ -1,0 +1,59 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="1229BE63-92D9-7FB9-FC19-D3DEC8CEBA18" name="Property_Feature">
+<createdBy>koreyrodi</createdBy>
+<createdTime>2026-02-06 20:20:19 UTC</createdTime>
+<ownerDesignName>Lab3</ownerDesignName>
+<engineerTo>
+<item key="9FF6454B-3DE6-5AC8-BABF-BD18243903A4" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Property_ID" id="B8832907-7617-8041-7CC1-D916B8CEFEAB">
+<createdBy>koreyrodi</createdBy>
+<createdTime>2026-02-06 20:55:48 UTC</createdTime>
+<ownerDesignName>Lab3</ownerDesignName>
+<engineerTo>
+<item key="9FF6454B-3DE6-5AC8-BABF-BD18243903A4" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Feature_ID" id="F4B4E871-5802-651F-44A5-56E418D4C846">
+<createdBy>koreyrodi</createdBy>
+<createdTime>2026-02-06 20:55:39 UTC</createdTime>
+<generatorID>AED4CEAA-BB3D-F9A3-0B5C-B3D40E433248</generatorID>
+<ownerDesignName>Lab3</ownerDesignName>
+<engineerTo>
+<item key="9FF6454B-3DE6-5AC8-BABF-BD18243903A4" value="true"/>
+</engineerTo>
+<referedAttribute>269271B2-7948-1EE7-6A1D-3928DD22B43A</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="A66057FB-023B-972B-4E69-4D6C4E92645E" name="Property_Feature PK">
+<createdBy>koreyrodi</createdBy>
+<createdTime>2026-02-06 21:02:29 UTC</createdTime>
+<ownerDesignName>Lab3</ownerDesignName>
+<engineerTo>
+<item key="9FF6454B-3DE6-5AC8-BABF-BD18243903A4" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>B8832907-7617-8041-7CC1-D916B8CEFEAB</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

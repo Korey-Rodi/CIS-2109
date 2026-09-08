@@ -1,0 +1,62 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="8C689B52-FF4C-7A13-76E3-8607886D062D" name="Visit_Service">
+<createdBy>koreyrodi</createdBy>
+<createdTime>2026-02-18 02:10:25 UTC</createdTime>
+<ownerDesignName>HW1Part2</ownerDesignName>
+<engineerTo>
+<item key="00C6BB50-DD8E-34EB-1EFB-590FBFEEE972" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Visit_ID" id="920CA208-FBFC-0ABD-6DF5-6E80621B9E64">
+<createdBy>koreyrodi</createdBy>
+<createdTime>2026-02-18 02:12:04 UTC</createdTime>
+<generatorID>5B22BC47-2700-C9CC-24C0-03B53AA0A48C</generatorID>
+<ownerDesignName>HW1Part2</ownerDesignName>
+<engineerTo>
+<item key="00C6BB50-DD8E-34EB-1EFB-590FBFEEE972" value="true"/>
+</engineerTo>
+<referedAttribute>45C35603-CDDD-C15F-A7DE-5D9E1762ADC3</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Service_ID" id="3E2CA1CC-C770-0552-CF04-CDA7F7492A7E">
+<createdBy>koreyrodi</createdBy>
+<createdTime>2026-02-18 02:12:51 UTC</createdTime>
+<generatorID>6876BC68-790B-B9D6-5B5E-2BAED511A9ED</generatorID>
+<ownerDesignName>HW1Part2</ownerDesignName>
+<engineerTo>
+<item key="00C6BB50-DD8E-34EB-1EFB-590FBFEEE972" value="true"/>
+</engineerTo>
+<referedAttribute>2C8BCF5D-FC60-2158-EE57-FCB326D32EA8</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="951579C2-9F9F-BBF0-78EF-959A1AE8105D" name="Visit_Service PK">
+<createdBy>koreyrodi</createdBy>
+<createdTime>2026-02-18 02:15:12 UTC</createdTime>
+<ownerDesignName>HW1Part2</ownerDesignName>
+<engineerTo>
+<item key="00C6BB50-DD8E-34EB-1EFB-590FBFEEE972" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>920CA208-FBFC-0ABD-6DF5-6E80621B9E64</attributeRef>
+<attributeRef>3E2CA1CC-C770-0552-CF04-CDA7F7492A7E</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>
